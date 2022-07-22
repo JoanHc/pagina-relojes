@@ -1,0 +1,220 @@
+/*paleta de colores*/
+:root{
+    --primario:#9c27b8;
+    --primarioObscuro:#891190;
+    --secundario:#ffce00;
+    --secundarioObscuro:rgb(237,287,2);
+    --blaco:#fff;
+    --negro:#000;
+    --fuentePrincipal:'Staatliches', cursive;
+ }
+ 
+ html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+ }
+
+ *, *:before, *:after {
+    box-sizing: inherit;
+ }
+ 
+  /*variables globales*/
+  body{
+     background-color: var(--blaco);
+     font-size: 1.6rem;
+     line-height: 1.5;
+    
+  }
+  p{
+     font-size: 1.8rem;
+     font-family: garamond;
+     color: var(--negro);
+  }
+  a{
+     text-decoration: none;
+  }
+  img{
+     max-width: 100%;
+  }
+  .contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+  h1, h2, h3{
+     text-align: center;
+     color: var(--negro);
+     font-family: var(--fuentePrincipal);
+  }
+  h2{
+    font-size: 4rem;
+  }
+  
+  /*hearder navegacion*/
+  header{
+    padding: 30px 0;
+ }
+ header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+ 
+ }
+ header .titulo{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: black;
+    font-size: 40px;
+ }
+ header nav a{
+    color: gray;
+    text-decoration: none;
+    margin: 30px;
+ }
+ 
+ header nav a:hover , 
+ header nav a.activo{
+    color:#212121;
+ }
+
+ .form-login{
+    /*El atributo width establece la anchura de visualización de la imagen*/
+    width: 400px;
+    background: white;
+    padding: 30px;
+    margin: auto;
+   /*establece el margen superior de un elemento especificando una longitud o un porcentaje*/
+    margin-top: 100px;
+     /*font-family y src agrega estilo de la fuente */
+    font-family: var(--fuentePrincipal);
+    color: black;
+    /*permite proyectar una sombra difuminada desde el marco de casi cualquier elemento*/
+    box-shadow: 7px 13px 37px #000;
+    top: 200px;
+}
+
+.control{
+    width: 100%;
+    background: white;
+    padding: 10px;
+    /*nos permite redondear los bordes de las cajas*/
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-family: garamond; 
+    font-size: 18px;
+    border: #E5E8E8 2px solid;
+    color: black;
+   
+}
+
+.form-login a{
+    color: black;
+    text-decoration: none;
+}
+.form-login a:hover{
+    color: black;
+    text-decoration: underline;
+}
+/*esta clase permitira dar estilo al boton*/
+.form-login .boton{
+     width: 100%;
+     background: #1f53c5;
+     border: none;
+     padding: 12px;
+     color: white;
+     margin: 16px 0px;
+     font-size: 16px;
+}
+.boton:hover{
+    
+    background-color: blue;
+}
+.titulo h3{
+    font-family: var(--fuentePrincipal);
+    width: 450px;
+    height: 27px;
+    left: 150px;
+    top: 122px;
+    font-size: 25px;
+
+}
+/*foter*/
+.footer{
+    background-color: var(--negro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+ }
+ .footer__texto{
+   color: var(--blaco);
+   font-size: 2rem;
+   text-align: center;
+ }
+  /*iconos*/
+.icono{
+    height: 40px;
+    width: 40px;
+    background-color: var(--blaco);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 900px;
+    top: 820px;
+ }
+ .icono__1{
+    height: 40px;
+    width: 40px;
+    background-color: var(--blaco);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 1005px;
+    top: 820px;
+ }
+ .icono__2{
+    height: 40px;
+    width: 40px;
+    background-color: var(--blaco);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 1105px;
+    top: 820px;
+ 
+ }
+ @media(max-width: 768px){
+   header .contenedor nav{
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     background-color: white;
+     padding-top: 80px;
+     padding-bottom: 80px;
+     padding-right: 15px;
+     padding-left: 15px;
+     top: 0;
+     left: 0;
+     display: flex;
+     flex-direction: column;
+     transition: all 0.4s ease;
+     transform: translateX(100%);
+ }
+ .contenedor{
+   width: 100%;
+ }
+ header .contenedor nav a {
+   font-size: 30px;
+   margin: 15px 0;
+ }
+ footer{
+   text-align: center;
+}
+footer .icono, .icono__1, .icono__2{
+   justify-content: center;
+}
+ }

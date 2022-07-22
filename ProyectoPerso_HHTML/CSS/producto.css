@@ -1,0 +1,232 @@
+/*paleta de colores*/
+:root{
+    --primario:#9c27b8;
+    --primarioObscuro:#891190;
+    --secundario:#ffce00;
+    --secundarioObscuro:rgb(237,287,2);
+    --blaco:#fff;
+    --negro:#000;
+    --fuentePrincipal:'Staatliches', cursive;
+ }
+ 
+ html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+ }
+
+ *, *:before, *:after {
+    box-sizing: inherit;
+ }
+ 
+  /*variables globales*/
+  body{
+     background-color: var(--blaco);
+     font-size: 1.6rem;
+     line-height: 1.5;
+    
+  }
+  p{
+     font-size: 1.8rem;
+     font-family: Arial, Helvetica, sans-serif;
+     color: var(--negro);
+  }
+  a{
+     text-decoration: none;
+  }
+  img{
+     max-width: 100%;
+  }
+  .contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+  h1, h2, h3{
+     text-align: center;
+     color: var(--secundario);
+     font-family: var(--fuentePrincipal);
+  }
+  h2{
+    font-size: 4rem;
+  }
+  
+  /*hearder navegacion*/
+  header{
+    padding: 30px 0;
+ }
+ header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+ 
+ }
+ header .titulo{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: black;
+    font-size: 40px;
+ }
+ header nav a{
+    color: gray;
+    text-decoration: none;
+    margin: 30px;
+ }
+ 
+ header nav a:hover , 
+ header nav a.activo{
+    color:#212121;
+ }
+ 
+ /*Diseño de productos*/
+.Producto{
+    width: 80%;
+    margin: auto;  
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.articulo_Venta{
+    display: grid;
+    grid-template-columns: 50% 50% ; /*partida en 2 columnas*/
+    grid-template-rows: auto auto auto;
+    column-gap: 3rem; /*Separacion de colmnas*/
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.articulo_Venta .imagen img{
+    
+   position: relative;
+   vertical-align: top;
+    align-items: center;
+    top: 210px;
+    
+}
+
+
+
+.articulo_Venta h4{
+    font-family: var(--fuentePrincipal);
+    color: var(--Primario600);
+    font-size: xx-large;
+    text-justify: auto;
+}
+/*Diseño de botones*/
+.Boton_comprar a,
+.Boton_añadir a{
+    background: #007CFC;
+    border: none;
+    border-radius: 20px;
+    padding: 0.93em 1.87em;
+    color: white;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+    text-decoration: none;
+}
+
+.Boton_comprar a:hover,
+.Boton_añadir a:hover{
+        
+        background: rgba(16, 100, 209, 0.5);
+        color: var(--blanco);
+}
+.Botones{
+    display: grid;
+    grid-template-columns: 50% 50%; /*partida en 2 columnas*/
+    grid-template-rows: auto auto auto;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    text-align: center;
+}
+/*footter*/
+.footer{
+   background-color: var(--negro);
+   padding: 1rem 0;
+   margin-top: 2rem;
+}
+.footer__texto{
+  color: var(--blaco);
+  font-size: 2rem;
+  text-align: center;
+}
+/*iconos*/
+.icono{
+   height: 40px;
+   width: 40px;
+   background-color: var(--blaco);
+   border-radius: 50%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   position: absolute;
+   left: 900px;
+   top: 950px;
+}
+.icono__1{
+   height: 40px;
+   width: 40px;
+   background-color: var(--blaco);
+   border-radius: 50%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   position: absolute;
+   left: 1005px;
+   top: 950px;
+}
+.icono__2{
+   height: 40px;
+   width: 40px;
+   background-color: var(--blaco);
+   border-radius: 50%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   position: absolute;
+   left: 1105px;
+   top: 950px;
+
+}
+@media(max-width: 767x){
+    header .contenedor nav{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      padding-top: 80px;
+      padding-bottom: 80px;
+      padding-right: 15px;
+      padding-left: 15px;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s ease;
+      transform: translateX(100%);
+  }
+  .contenedor{
+    width: 100%;
+  }
+  header .contenedor nav a {
+    font-size: 30px;
+    margin: 15px 0;
+  }
+ 
+ .articulo_Venta{
+   grid-template-columns: 100%; /*partida en 2 columnas*/
+}
+
+.articulo_Venta img{
+   margin: auto;
+   display: block;
+   height: 550px;
+}
+ .Botones{
+   width: 100%;
+   padding: 15px;
+   
+ }
+  }

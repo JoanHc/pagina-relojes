@@ -1,0 +1,151 @@
+/*paleta de colores*/
+:root{
+  --primario:#9c27b8;
+  --primarioObscuro:#891190;
+  --secundario:#ffce00;
+  --secundarioObscuro:rgb(237,287,2);
+  --blaco:#fff;
+  --negro:#000;
+  --fuentePrincipal:'Staatliches', cursive;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*variables globales*/
+body{
+   background-color: var(--blaco);
+   font-size: 1.6rem;
+   line-height: 1.5;
+  
+}
+p{
+   font-size: 1.8rem;
+   font-family: Arial, Helvetica, sans-serif;
+   color: var(--negro);
+}
+a{
+   text-decoration: none;
+   font-size: 1.7rem;
+
+}
+img{
+   max-width: 100%;
+}
+.contenedor{
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/*hearder*/
+header{
+  padding: 30px 0;
+}
+header .contenedor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+header .titulo{
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  color: black;
+  font-size: 40px;
+}
+header nav a{
+  color: gray;
+  text-decoration: none;
+  margin: 20px;
+}
+
+header nav a:hover , 
+header nav a.activo{
+  color:#212121;
+}
+.texto-intro h2{     
+position: absolute;
+width: 616px;
+height: 165px;
+left: 30px;
+top: 304px;
+font-weight: 400;
+font-size: 58px;
+line-height: 79px;
+}
+.texto-intro p{
+  position: absolute;
+  width: 596px;
+  height: 133px;
+  left: 30px;
+  top: 485px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+}
+/*imagen*/
+.col-sm img{
+  position: absolute;
+  width: 611px;
+  height: 623px;
+  left: 720px;
+  top: 157px;
+}
+
+/*botones*/
+button{
+   border-radius: 45px !important;
+   font-size: 22px !important;
+}
+.btn-primary{
+   background-color: #F93175 !important;
+   border: none !important;
+   padding: 17px 27px !important;
+   position: absolute;
+   width: 210px;
+   height: 64px;
+   left: 30px;
+   top: 580px;
+}
+.btn-outline-primary{
+  border-color: black !important;
+  color: black !important;
+  padding: 17px 58px !important;
+  position: absolute;
+  width: 197px;
+  height: 64px;
+  left: 320px;
+  top: 580px;
+}
+@media(max-width: 768px){
+  header .contenedor nav{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 15px;
+    padding-left: 15px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    transform: translateX(100%);
+}
+.contenedor{
+  width: 100%;
+}
+header .contenedor nav a {
+  font-size: 30px;
+  margin: 15px 0;
+}
+}
+ 
